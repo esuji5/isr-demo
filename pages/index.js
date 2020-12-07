@@ -1,7 +1,3 @@
-import Head from "next/head"
-import Link from "next/link"
-
-
 export default function Index({current}) {
   return (
     <div>
@@ -10,7 +6,6 @@ export default function Index({current}) {
   );
 }
 
-// Change method from getServerSideProps to getStaticProps for testing SSR/ISG behavior.
 export async function getStaticProps() {
     const date = new Date();
     const current = date.toLocaleString()
