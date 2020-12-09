@@ -1,7 +1,7 @@
 
 # For using remote container feature of VS Code. This is an image as developing environment.
 FROM node:15.3.0 AS dev
-RUN apt-get update && apt-get install vim -y && apt-get clean
+RUN apt-get update && apt-get install vim -y && apt-get clean && yarn global add serverless
 
 # For using container
 FROM node:current-alpine AS base
